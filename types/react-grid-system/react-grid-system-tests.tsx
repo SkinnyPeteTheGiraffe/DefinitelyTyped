@@ -3,20 +3,14 @@ import { Container, Row, Col, ScreenClassProvider, Visible, Hidden } from 'react
 
 const TestHeader = () => <div />;
 const TestPage = () => <div />;
-const TestFooter= () => <div />;
+const TestFooter = () => <div />;
 
 const ContainerRowColTests = () => (
     <Container>
         <Row>
-            <Col sm={4}>
-                One of three columns
-            </Col>
-            <Col sm={4}>
-                One of three columns
-            </Col>
-            <Col sm={4}>
-                One of three columns
-            </Col>
+            <Col sm={4}>One of three columns</Col>
+            <Col sm={4}>One of three columns</Col>
+            <Col sm={4}>One of three columns</Col>
         </Row>
     </Container>
 );
@@ -30,21 +24,17 @@ const ScreenClassProviderTest = () => (
 
 const VisibilityTest = () => (
     <div>
-        <Visible lg>
-            Can see in large :)
-        </Visible>
-        <Hidden lg>
-            Can't see in large :(
-        </Hidden>
+        <Visible lg>Can see in large :)</Visible>
+        <Hidden lg>Can't see in large :(</Hidden>
     </div>
 );
 
 const ReactGridSystemTests = () => {
     return (
         <div>
-            <ContainerRowColTests/>
-            <ScreenClassProviderTest/>
-            <VisibilityTest/>
+            <ContainerRowColTests />
+            <ScreenClassProviderTest />
+            <VisibilityTest />
         </div>
     );
 };
