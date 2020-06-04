@@ -3,9 +3,8 @@
 // Definitions by: Bobby Plunkett <https://github.com/SkinnyPeteTheGiraffe/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/// <reference path="../react/index.d.ts"/>
-
 declare module 'react-grid-system' {
+    import * as React from 'react';
     export interface ReactGridSystemBreakPoints {
         xs?: number;
         sm?: number;
