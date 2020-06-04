@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Row, Col, ScreenClassProvider, Visible, Hidden } from 'react-grid-system';
+import { Container, Row, Col, ScreenClassProvider, Visible, Hidden, ScreenClassRender } from 'react-grid-system';
 
 const TestHeader = () => <div />;
 const TestPage = () => <div />;
@@ -21,6 +21,15 @@ const ScreenClassProviderTest = () => (
         <TestFooter />
     </ScreenClassProvider>
 );
+const ScreenClassRenderTest = () => (
+    <ScreenClassRender
+        render={screenClass => (
+            <p style={{ fontSize: ['lg', 'xl'].some(s => s === screenClass) ? '2rem' : '1rem' }}>
+                Screen class: {screenClass}
+            </p>
+        )}
+    />
+);
 
 const VisibilityTest = () => (
     <div>
@@ -34,6 +43,7 @@ const ReactGridSystemTests = () => {
         <div>
             <ContainerRowColTests />
             <ScreenClassProviderTest />
+            <ScreenClassRenderTest />
             <VisibilityTest />
         </div>
     );

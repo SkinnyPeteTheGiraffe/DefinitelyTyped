@@ -1,4 +1,4 @@
-// Type definitions for react-grid-system v6.4.2
+// Type definitions for react-grid-system 6.4
 // Project: https://github.com/sealninja/react-grid-system
 // Definitions by: Bobby Plunkett <https://github.com/SkinnyPeteTheGiraffe/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -21,12 +21,12 @@ export interface ReactGridSystemVisibilityProps {
     xl?: boolean;
 }
 export interface ReactGridSystemScreenClassRenderProps {
-    render: Function;
+    render: (screenClass?: 'xs' | 'sm' | 'md' | 'lg' | 'xl') => React.ReactNode;
 }
 export interface ReactGridSystemScreenClassProviderProps {
     children: React.ReactNode;
-    fallbackScreenClass?: 'xs' | 'sm' | 'md' | 'lg' | 'xl',
-    useOwnWidth?: boolean
+    fallbackScreenClass?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    useOwnWidth?: boolean;
 }
 export interface ReactGridSystemContainerProps {
     children?: React.ReactNode;
